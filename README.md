@@ -83,3 +83,15 @@ logger := &lokiLogger{
 zl := zerolog.New(lokiLogger).Level(zerolog.Level(logger.Level))
 zl.Debug("foo")
 ```
+
+## Standalone
+```
+logger := &lokiLogger{
+	URL:        "https://logs-prod3.grafana.net/loki/api/v1/push",
+	Key:        "user:key", // base64 encoded
+	BufferSize: 50,
+	Level:      0,
+	Labels:     "label1:1","label2:2"
+}
+logger.Write([]byte("foo"))
+```
