@@ -77,7 +77,7 @@ loki := &lokiLogger{
 	Key:        "user:key", // base64 encoded
 	BufferSize: 50,
 	Level:      0,
-	Labels:     "label1:1","label2:2"
+	Labels:     "label1:1,label2:2"
 }
   
 zl := zerolog.New(loki).Level(zerolog.Level(loki.Level))
@@ -91,7 +91,7 @@ logger := &lokiLogger{
 	Key:        "user:key", // base64 encoded
 	BufferSize: 50,
 	Level:      0,
-	Labels:     "label1:1","label2:2"
+	Labels:     "label1:1,label2:2"
 }
 logger.Write([]byte("foo"))
 ```
