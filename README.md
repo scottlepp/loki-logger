@@ -81,4 +81,5 @@ logger := &lokiLogger{
 }
   
 zl := zerolog.New(lokiLogger).Level(zerolog.Level(logger.Level))
+zl.Debug("foo")
 ```
