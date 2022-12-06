@@ -72,7 +72,7 @@ c.Transport = log.NewHTTPLogger("my-plugin-id", c.Transport)
 ## Usage with [ZeroLog](https://github.com/rs/zerolog)
 
 ```
-logger := &lokiLogger{
+loki := &lokiLogger{
 	URL:        "https://logs-prod3.grafana.net/loki/api/v1/push",
 	Key:        "user:key", // base64 encoded
 	BufferSize: 50,
@@ -80,7 +80,7 @@ logger := &lokiLogger{
 	Labels:     "label1:1","label2:2"
 }
   
-zl := zerolog.New(lokiLogger).Level(zerolog.Level(logger.Level))
+zl := zerolog.New(loki).Level(zerolog.Level(loki.Level))
 zl.Debug("foo")
 ```
 
