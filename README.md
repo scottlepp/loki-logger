@@ -1,6 +1,7 @@
 # loki-logger
 A go based logger for Loki with [ZeroLog](https://github.com/rs/zerolog) adapter.
 
+![logging-evolved](https://user-images.githubusercontent.com/6108819/206758962-22c9f687-fa6e-4795-b45e-b4c6b91feea2.png)
 
 ## Usage with Grafana backend plugins.
 
